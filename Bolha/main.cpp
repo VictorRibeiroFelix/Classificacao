@@ -17,7 +17,7 @@ void aleatorio(venda vendas[], int tamanho){
     for (int i = 0; i < tamanho; i++) {
         vendas[i].nome = "Produto_" + to_string(i + 1);
         vendas[i].qntVenda = rand() % 100 + 1;
-        vendas[i].preco = (rand() % 10000) / 100.00;
+        vendas[i].preco = (rand() % 10000) / 1.00;
         vendas[i].data = "20/10/2024";
     }
 
@@ -37,10 +37,10 @@ void bolha(venda vendas[], int tamanho) {
         }
     }
     for (int i = 0; i < tamanho; i++) {
-        cout << (i+1) << "- Nome: " << vendas[i].nome << endl;
-        cout << "\t\tQuantidade: " << vendas[i].qntVenda << endl;
-        cout << "\t\tPreco: " << vendas[i].preco << endl;
-        cout << "\t\tData compra: " << vendas[i].data << endl;
+        cout << "\nNome produto: " << vendas[i].nome << endl;
+        cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+        cout << "Preco unitario: " << vendas[i].preco << endl;
+        cout << "Data compra: " << vendas[i].data << endl;
         cout << endl;
     }
 }
@@ -60,10 +60,10 @@ void insercao(venda vendas[], int tamanho){
 
     }
     for (int i = 0; i < tamanho; i++) {
-        cout << (i+1) << "- Nome: " << vendas[i].nome << endl;
-        cout << "\t\tQuantidade: " << vendas[i].qntVenda << endl;
-        cout << "\t\tPreco: " << vendas[i].preco << endl;
-        cout << "\t\tData compra: " << vendas[i].data << endl;
+        cout << "\nNome produto: " << vendas[i].nome << endl;
+        cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+        cout << "Preco unitario: " << vendas[i].preco << endl;
+        cout << "Data compra: " << vendas[i].data << endl;
         cout << endl;
     }
 }
@@ -86,10 +86,10 @@ void selecao(venda vendas[], int tamanho){
         }
     }
     for (int i = 0; i < tamanho; i++) {
-        cout << (i+1) << "- Nome: " << vendas[i].nome << endl;
-        cout << "\t\tQuantidade: " << vendas[i].qntVenda << endl;
-        cout << "\t\tPreco: " << vendas[i].preco << endl;
-        cout << "\t\tData compra: " << vendas[i].data << endl;
+        cout << "\nNome produto: " << vendas[i].nome << endl;
+        cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+        cout << "Preco unitario: " << vendas[i].preco << endl;
+        cout << "Data compra: " << vendas[i].data << endl;
         cout << endl;
     }
 }
@@ -143,10 +143,10 @@ void contagem(venda vendas[], int tamanho) {
 
     // Exibindo as vendas ordenadas
     for (int i = 0; i < tamanho; i++) {
-        cout << (i + 1) << "- Nome: " << vendas[i].nome << endl;
-        cout << "\t\tQuantidade: " << vendas[i].qntVenda << endl;
-        cout << "\t\tPreço: " << vendas[i].preco << endl;
-        cout << "\t\tData compra: " << vendas[i].data << endl;
+        cout << "\nNome produto: " << vendas[i].nome << endl;
+        cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+        cout << "Preco unitario: " << vendas[i].preco << endl;
+        cout << "Data compra: " << vendas[i].data << endl;
         cout << endl;
     }
 }
@@ -170,10 +170,10 @@ void shell(venda vendas[], int tamanho) {
 
     // Exibe os resultados em ordem decrescente
     for (int i = 0; i < tamanho; i++) {
-        cout << (i + 1) << "- Nome: " << vendas[i].nome << endl;
-        cout << "\t\tQuantidade: " << vendas[i].qntVenda << endl;
-        cout << "\t\tPreco: " << vendas[i].preco << endl;
-        cout << "\t\tData compra: " << vendas[i].data << endl;
+        cout << "\nNome produto: " << vendas[i].nome << endl;
+        cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+        cout << "Preco unitario: " << vendas[i].preco << endl;
+        cout << "Data compra: " << vendas[i].data << endl;
         cout << endl;
     }
 }
@@ -217,77 +217,101 @@ void exibirMenu() {
     cout << "\n==========================================" << endl;
     cout << "         SELECIONE UM METODO DE ORDENACAO" << endl;
     cout << "==========================================\n" << endl;
-    cout << "  [1] - Ordenação Bolha (Bubble Sort)" << endl;
-    cout << "  [2] - Ordenação Inserção (Insertion Sort)" << endl;
-    cout << "  [3] - Ordenação Seleção (Selection Sort)" << endl;
-    cout << "  [4] - Ordenação Contagem (Counting Sort)" << endl;
+    cout << "  [1] - Ordenacao Bolha (Bubble Sort)" << endl;
+    cout << "  [2] - Ordenacao Insercao (Insertion Sort)" << endl;
+    cout << "  [3] - Ordenacao Selecao (Selection Sort)" << endl;
+    cout << "  [4] - Ordenacao Contagem (Counting Sort)" << endl;
     cout << "  [5] - Ordenação Shell (Shell Sort)" << endl;
-    cout << "  [6] - QuickSort" << endl;
+    cout << "  [6] - Ordenacao" << endl;
     cout << "------------------------------------------" << endl;
     cout << "  [7] - Sair" << endl;
     cout << "==========================================\n" << endl;
     cout << "Escolha uma opcao: ";
 }
 
+void exibirMenuTamanho() {
+    cout << "\n==========================================" << endl;
+    cout << "        SELECIONE O TAMANHO DO DADO" << endl;
+    cout << "==========================================\n" << endl;
+    cout << "  [1] - 1.000 dados" << endl;
+    cout << "  [2] - 100.000 dados" << endl;
+    cout << "  [3] - 1.000.000 dados" << endl;
+    cout << "  [4] - Sair" << endl;
+    cout << "==========================================\n" << endl;
+    cout << "Escolha uma opcao: ";
+}
+
 
 int main() {
-    int tamanho =1000;
-    venda vendas[tamanho];
-    int opcao;
+    int opcaoTamanho, opcaoOrdenacao;
+    const int tamanhos[] = {1000, 100000, 1000000};  // Tamanhos possíveis
+    venda* vendas = nullptr;
 
     do {
+        exibirMenuTamanho();
+        cin >> opcaoTamanho;
 
-        exibirMenu();  // Exibe o menu atualizado
-        cin >> opcao;
+        if (opcaoTamanho >= 1 && opcaoTamanho <= 3) {
+            int tamanho = tamanhos[opcaoTamanho - 1];
+            vendas = new venda[tamanho];  // Aloca dinamicamente
 
-        switch (opcao) {
-            case 1:
-                TempoExecucao(bolha, vendas, tamanho, "Bolha");
-                break;
+            do {
 
-            case 2:
-                TempoExecucao(insercao, vendas, tamanho, "Insercao");
-                break;
+                exibirMenu();  // Exibe o menu atualizado
+                cin >> opcaoOrdenacao;
 
-            case 3:
-                TempoExecucao(selecao, vendas, tamanho, "Selecao");
-                break;
+                switch (opcaoOrdenacao) {
+                    case 1:
+                        TempoExecucao(bolha, vendas, tamanho, "Bolha");
+                        break;
 
-            case 4:
-                TempoExecucao(contagem, vendas, tamanho, "Contagem");
-                break;
+                    case 2:
+                        TempoExecucao(insercao, vendas, tamanho, "Insercao");
+                        break;
 
-            case 5:
-                TempoExecucao(shell, vendas, tamanho, "Shell");
-                break;
+                    case 3:
+                        TempoExecucao(selecao, vendas, tamanho, "Selecao");
+                        break;
 
-            case 6:
-                aleatorio(vendas, tamanho);
+                    case 4:
+                        TempoExecucao(contagem, vendas, tamanho, "Contagem");
+                        break;
 
-                for (int i = 0; i < tamanho; ++i) {
-                    cout << (i + 1) << "- Nome: " << vendas[i].nome << endl;
-                    cout << "\tQuantidade: " << vendas[i].qntVenda << endl;
-                    cout << "\tPreco: " << vendas[i].preco << endl;
-                    cout << "\tData compra: " << vendas[i].data << endl;
-                    cout << endl;
+                    case 5:
+                        TempoExecucao(shell, vendas, tamanho, "Shell");
+                        break;
+
+                    case 6:
+                        aleatorio(vendas, tamanho);
+
+                        for (int i = 0; i < tamanho; ++i) {
+                            cout << "\nNome produto: " << vendas[i].nome << endl;
+                            cout << "Quantidade vendido: " << vendas[i].qntVenda << endl;
+                            cout << "Preco unitario: " << vendas[i].preco << endl;
+                            cout << "Data compra: " << vendas[i].data << endl;
+                            cout << endl;
+                        }
+
+                        TempoExecucao([](venda arr[], int tam) { quickSort(arr, 0, tam - 1); }, vendas, tamanho, "QuickSort");
+
+                        break;
+
+                    case 7:
+                        cout << "\n>> Saindo do programa" << endl;
+                        break;
+
+                    default:
+                        cout << "\n Opcao invalida! Tente novamente." << endl;
+                        break;
                 }
+                cin.ignore();
+                cin.get();
+            } while (opcaoOrdenacao != 7);
 
-                TempoExecucao([](venda arr[], int tam) { quickSort(arr, 0, tam - 1); }, vendas, tamanho, "QuickSort");
-
-                break;
-
-            case 7:
-                cout << "\n>> Saindo do programa" << endl;
-                break;
-
-            default:
-                cout << "\n Opcao invalida! Tente novamente." << endl;
-                break;
+            delete[] vendas;  // Libera a memória
         }
-        cin.ignore();
-        cin.get();
-    } while (opcao != 7);
+
+    } while (opcaoTamanho != 4);
 
     return 0;
 }
-
